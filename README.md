@@ -38,4 +38,4 @@ I will keep adding more SQL practice questions as I learn new concepts.
 
 ## GitHub
 
-https://github.com/harinisro2007-cel
+https://github.com/harinisro2007-cell
