@@ -48,15 +48,15 @@ SELECT name, salary,
 FROM Employees;
 ```
 
-## 5. Ranking employees by salary
+## 5. Ranking employees by salary within each department
 
-This is the same RANK() function as before, used to see where each employee stands compared to others based on salary.
+This ranks employees separately inside each department, so each department starts at rank 1.
 
-```sql
-SELECT name, salary,
-       RANK() OVER (ORDER BY salary DESC) AS salary_rank
-FROM Employees;
-```
+    SELECT name, dept_id, salary,
+           RANK() OVER (PARTITION BY dept_id ORDER BY salary DESC) AS dept_salary_rank
+    FROM Employees;
+
+
 
 ## 6. Multiple window functions together
 
